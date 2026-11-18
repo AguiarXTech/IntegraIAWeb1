@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatIA</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>Meu ChatIA</h1>
+    </header>
+
+    <div class="tela">
+      <aside class="sidebar">
+        <label for="campo-provedor">Provedor de IA</label>
+        <select id="campo-provedor">
+          <option value="claude">Claude (Anthropic)</option>
+          <option value="openai">ChatGPT (OpenAI)</option>
+          <option value="gemini">Gemini (Google)</option>
+          <option value="groq">Groq (Llama)</option>
+        </select>
+
+        <label for="campo-chave">Chave de API</label>
+        <input type="password" id="campo-chave" placeholder="Digite sua chave de API" />
+        <button id="btn-salvar" type="button">Salvar</button>
+
+        <button id="btn-nova" type="button" class="btn-nova">+ Nova conversa</button>
+
+        <h3>Historico</h3>
+        <ul id="lista-conversas"></ul>
+      </aside>
+
+      <main class="chat-principal">
+        <div id="chat" class="chat"></div>
+
+        <form id="form" class="entrada">
+          <input type="text" id="input" class="input" placeholder="Digite sua mensagem..." autocomplete="off" />
+          <button type="submit" id="btn-enviar" class="btn-enviar">Enviar</button>
+        </form>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
